@@ -12,7 +12,6 @@ import {Router} from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   isUserLoggedIn: Boolean;
-  isGeneratedPassword: Boolean;
   isBadRequest: Boolean;
   userLogin: UserModel;
 
@@ -29,19 +28,15 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    const isGeneratedPassword = this.userLogin.isGeneratedPassword;
-
-
     if (Object.keys(this.userLogin).length > 1) {
       this.authService.login(this.userLogin)
         .subscribe(
           () => {
             this.appStateService.isLoggedIn();
-            console.log(isGeneratedPassword);
-            if (isGeneratedPassword === true) {
-              this.router.navigate(['/newpassword']);
-            } else {
+            if (this.userLogin.isGeneratedPassword === true) {
               this.router.navigate(['']);
+            } else {
+              this.router.navigate(['/newpassword']);
             }
           }, error => {
             if (error === 'Bad Request') {
