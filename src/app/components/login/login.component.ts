@@ -3,6 +3,7 @@ import {AuthenticationService} from '../../services/authentication.service';
 import {AppStateService} from '../../app-state.service';
 import {LoginService} from '../../services/login.service';
 import {UserModel} from '../../models/user.model';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -16,8 +17,9 @@ export class LoginComponent implements OnInit {
 
   constructor(private authService: AuthenticationService,
               private appStateService: AppStateService,
+              private router: Router,
               private loginService: LoginService) {
-    this.userLogin = new UserModel();
+              this.userLogin = new UserModel();
   }
 
   ngOnInit() {
@@ -26,12 +28,16 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-
     if (Object.keys(this.userLogin).length > 1) {
       this.authService.login(this.userLogin)
         .subscribe(
           () => {
             this.appStateService.isLoggedIn();
+            if (this.userLogin.isGeneratedPassword === true) {
+              this.router.navigate(['']);
+            } else {
+              this.router.navigate(['/newpassword']);
+            }
           }, error => {
             if (error === 'Bad Request') {
               this.loginService.isBadRequest.next(true);

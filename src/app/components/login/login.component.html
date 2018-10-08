@@ -1,4 +1,4 @@
-<div class="body"  *ngIf="!isUserLoggedIn">
+<div class="body"  *ngIf="!isLoggedIn">
   <img src="../../assets/img/flow.png">
   <div class="form-box mx-auto shadow">
     <div class="form-top pb-4">
@@ -6,7 +6,7 @@
     </div>
 
     <div class="form-bottom">
-      <form role="form" #form="ngForm" class="registration-form">
+      <form role="form" #form="ngForm">
         <div class="form-group iconInside">
           <label class="sr-only" for="email">Email</label>
           <i class="fa fa-envelope" id="icon"></i>
