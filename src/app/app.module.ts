@@ -15,9 +15,8 @@ import { NewpasswordComponent } from './components/newpassword/newpassword.compo
 // import { GroupComponent } from './components/grouplist/group/group.component';
 // import { UserslistComponent } from './components/userslist/userslist.component';
 // import { UserComponent } from './components/user/user.component';
-// import { SidebarMenuComponent } from './components/sidebar-menu/sidebar-menu.component';
-// import { SidebarNamesComponent } from './components/sidebar-names/sidebar-names.component';
-
+import { SidebarMenuComponent } from './components/sidebar-menu/sidebar-menu.component';
+import { SidebarNamesComponent } from './components/sidebar-names/sidebar-names.component';
 
 
 const appRoutes: Routes = [
@@ -38,8 +37,8 @@ const appRoutes: Routes = [
     // GroupComponent,
     // UserslistComponent,
     // UserComponent,
-    // SidebarMenuComponent,
-    // SidebarNamesComponent
+    SidebarMenuComponent,
+    SidebarNamesComponent,
   ],
   imports: [
     BrowserModule,
