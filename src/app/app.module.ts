@@ -1,13 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes} from '@angular/router';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { AuthenticationService } from './services/authentication.service';
+import { RegistrationComponent } from './components/registration/registration.component';
+import {AuthInterceptor} from './interceptors/auth.interceptor';
 import { LandingComponent } from './components/landing/landing.component';
 import { NewpasswordComponent } from './components/newpassword/newpassword.component';
 // import { RegistrationComponent } from './components/authregistration/registration.component';
@@ -24,13 +26,14 @@ const appRoutes: Routes = [
   { path: '', component:  LandingComponent},
   { path: 'login', component:  LoginComponent},
   { path: 'newpassword', component:  NewpasswordComponent},
-
+  { path: 'registration', component:  RegistrationComponent},
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    RegistrationComponent,
     LandingComponent,
     NewpasswordComponent,
     // RegistrationComponent,
@@ -49,7 +52,14 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     AngularFontAwesomeModule
   ],
-  providers: [AuthenticationService],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    },
+    AuthenticationService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
