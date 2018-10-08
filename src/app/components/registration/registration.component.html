@@ -1,0 +1,63 @@
+<div class="body"  *ngIf="!isUserLoggedIn">
+  <img src="../../assets/img/flow.png">
+  <div class="form-box mx-auto shadow">
+    <div class="form-top pb-4">
+      <h3>Regisztráció</h3>
+    </div>
+
+    <div class="form-bottom">
+      <form role="form" #form="ngForm" class="registration-form">
+        <div class="form-group iconInside">
+          <label class="sr-only" for="name">Name</label>
+          <i class="fa fa-user" id="icon"></i>
+          <input type="text" id="name"
+                 class="form-control" name="name"
+                 #name="ngModel" [(ngModel)]="userRegistration.name"
+                 placeholder="Név" name />
+        </div>
+        <div class="form-group iconInside">
+          <label class="sr-only" for="email">Email</label>
+          <i class="fa fa-envelope" id="icon"></i>
+          <input type="text" id="email"
+                 class="form-control" name="email"
+                 #email="ngModel" [(ngModel)]="userRegistration.email"
+                 placeholder="E-mail cím" email />
+        </div>
+        <div class="form-group iconInside">
+          <label class="sr-only" for="contractId">contractId</label>
+          <i class="fa fa-user" id="icon"></i>
+          <input type="text" id="contractId"
+                 class="form-control" name="contractId"
+                 #email="ngModel" [(ngModel)]="userRegistration.contractId"
+                 placeholder="Szerződésszám" contractId />
+        </div>
+        <div class="form-group iconInside">
+          <label class="sr-only" for="accessLevel">accessLevel</label>
+          <i class="fa fa-user" id="icon"></i>
+          <input type="text" id="accessLevel"
+                 class="form-control" name="accessLevel"
+                 #email="ngModel" [(ngModel)]="userRegistration.accessLevel"
+                 placeholder="Felhasználói szint" accessLevel />
+        </div>        <div class="form-group iconInside">
+        <label class="sr-only" for="contractId">contractId</label>
+        <i class="fa fa-user" id="icon"></i>
+        <input type="text" id="contractId"
+               class="form-control" name="contractId"
+               #email="ngModel" [(ngModel)]="userRegistration.contractId"
+               placeholder="Szerződésszám" contractId />
+      </div>        <div class="form-group iconInside">
+        <label class="sr-only" for="contractId">contractId</label>
+        <i class="fa fa-user" id="icon"></i>
+        <input type="text" id="contractId"
+               class="form-control" name="contractId"
+               #email="ngModel" [(ngModel)]="userRegistration.contractId"
+               placeholder="Szerződésszám" contractId />
+      </div>
+        <button (click)="registration()" class="btn btn-block mt-5 mx-auto">REGISZTRÁLÁS</button>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+

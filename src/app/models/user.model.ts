@@ -8,4 +8,5 @@ export class UserModel {
   public isIn: Boolean;
   public isGeneratedPassword: Boolean;
   public logs: String;
+  public macAddress: String;
 }

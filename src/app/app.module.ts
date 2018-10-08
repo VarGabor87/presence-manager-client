@@ -8,6 +8,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { AuthenticationService } from './services/authentication.service';
+import { RegistrationComponent } from './components/registration/registration.component';
 // import { RegistrationComponent } from './components/authregistration/registration.component';
 // import { GrouplistComponent } from './components/grouplist/grouplist.component';
 // import { GroupComponent } from './components/grouplist/group/group.component';
@@ -20,12 +21,14 @@ import { AuthenticationService } from './services/authentication.service';
 
 const appRoutes: Routes = [
   { path: '', component:  LoginComponent},
+  { path: 'registration', component:  RegistrationComponent},
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    RegistrationComponent,
     // RegistrationComponent,
     // GrouplistComponent,
     // GroupComponent,
