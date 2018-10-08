@@ -22,11 +22,13 @@ export class AuthenticationService {
     sessionStorage.setItem('id_token', authResult.idToken);
     sessionStorage.setItem('expires_at', JSON.stringify(expiresAt.valueOf()) );
     sessionStorage.setItem('accessLevel', authResult.accessLevel);
+    sessionStorage.setItem('is_generated_pw', authResult.isGeneratedPassword);
   }
 
   logout() {
     sessionStorage.removeItem('id_token');
     sessionStorage.removeItem('expires_at');
     sessionStorage.removeItem('accessLevel');
+    sessionStorage.removeItem('is_generated_pw');
   }
 }
