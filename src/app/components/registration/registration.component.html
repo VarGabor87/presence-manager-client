@@ -8,12 +8,12 @@
     <div class="form-bottom">
       <form role="form" #form="ngForm" class="registration-form">
         <div class="form-group iconInside">
-          <label class="sr-only" for="name">Name</label>
+          <label class="sr-only" for="userName">Name</label>
           <i class="fa fa-user" id="icon"></i>
-          <input type="text" id="name"
-                 class="form-control" name="name"
+          <input type="text" id="userName"
+                 class="form-control" name="userName"
                  #name="ngModel" [(ngModel)]="userRegistration.name"
-                 placeholder="Név" name />
+                 placeholder="Név" userName />
         </div>
         <div class="form-group iconInside">
           <label class="sr-only" for="email">Email</label>
@@ -25,7 +25,7 @@
         </div>
         <div class="form-group iconInside">
           <label class="sr-only" for="contractId">contractId</label>
-          <i class="fa fa-user" id="icon"></i>
+          <i class="fa fa-address-card" id="icon"></i>
           <input type="text" id="contractId"
                  class="form-control" name="contractId"
                  #email="ngModel" [(ngModel)]="userRegistration.contractId"
@@ -33,25 +33,34 @@
         </div>
         <div class="form-group iconInside">
           <label class="sr-only" for="accessLevel">accessLevel</label>
-          <i class="fa fa-user" id="icon"></i>
-          <input type="text" id="accessLevel"
-                 class="form-control" name="accessLevel"
-                 #email="ngModel" [(ngModel)]="userRegistration.accessLevel"
-                 placeholder="Felhasználói szint" accessLevel />
-        </div>        <div class="form-group iconInside">
-        <label class="sr-only" for="contractId">contractId</label>
-        <i class="fa fa-user" id="icon"></i>
-        <input type="text" id="contractId"
-               class="form-control" name="contractId"
-               #email="ngModel" [(ngModel)]="userRegistration.contractId"
-               placeholder="Szerződésszám" contractId />
-      </div>        <div class="form-group iconInside">
-        <label class="sr-only" for="contractId">contractId</label>
-        <i class="fa fa-user" id="icon"></i>
-        <input type="text" id="contractId"
-               class="form-control" name="contractId"
-               #email="ngModel" [(ngModel)]="userRegistration.contractId"
-               placeholder="Szerződésszám" contractId />
+          <i class="fa fa-level-down" id="icon"></i>
+          <select type="text" id="accessLevel"
+          class="form-control" name="accessLevel"
+          #email="ngModel" [(ngModel)]="userRegistration.accessLevel">
+            <option value="2">Felhasználó</option>
+            <option value="1">Operátor</option>
+          </select>
+        </div>
+        <div class="form-group iconInside">
+          <label class="sr-only" for="group">group</label>
+          <i class="fa fa-users" id="icon"></i>
+          <select type="text" id="group"
+                  class="form-control" name="group"
+                  #email="ngModel" [(ngModel)]="userRegistration.group">
+            <option value="Mentor">Mentor</option>
+            <option value="TeamGamma">TeamGamma</option>
+            <option value="TeamDelta">TeamDelta</option>
+            <option value="Visitor">Visitor</option>
+            <option value="Admin">Admin</option>
+          </select>
+      </div>
+        <div class="form-group iconInside">
+        <label class="sr-only" for="macAddress">macAddress</label>
+        <i class="fa fa-address-book" id="icon"></i>
+        <input type="text" id="macAddress"
+               class="form-control" name="macAddress"
+               #email="ngModel" [(ngModel)]="userRegistration.macAddress"
+               placeholder="MAC Address" macAddress />
       </div>
         <button (click)="registration()" class="btn btn-block mt-5 mx-auto">REGISZTRÁLÁS</button>
       </form>
