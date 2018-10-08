@@ -38,7 +38,7 @@ export class NewpasswordComponent implements OnInit {
       this.userupdateService.update(this.userUpdateData)
         .subscribe(
           (response) => {
-            console.log(response);
+            sessionStorage.setItem('is_generated_pw', 'false');
             this.router.navigate(['/']);
           },
           error => {
