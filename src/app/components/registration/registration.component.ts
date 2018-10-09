@@ -25,6 +25,7 @@ export class RegistrationComponent implements OnInit {
           (response) => {
             console.log(response);
           }, error => {
+            alert('A megadott adat hibás, vagy már használatban van.');
             console.log(error);
           });
     }
