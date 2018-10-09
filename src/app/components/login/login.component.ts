@@ -33,8 +33,6 @@ export class LoginComponent implements OnInit {
         .subscribe(
           () => {
             const data = sessionStorage.getItem('is_generated_pw');
-            console.log(this.userLogin);
-            console.log(data);
             this.appStateService.isLoggedIn();
             if (data === 'false') {
               this.router.navigate(['']);
