@@ -32,8 +32,9 @@ export class LoginComponent implements OnInit {
       this.authService.login(this.userLogin)
         .subscribe(
           () => {
+            const data = sessionStorage.getItem('is_generated_pw');
             this.appStateService.isLoggedIn();
-            if (this.userLogin.isGeneratedPassword === true) {
+            if (data === 'false') {
               this.router.navigate(['']);
             } else {
               this.router.navigate(['/newpassword']);
