@@ -18,6 +18,6 @@ export class UserupdateService {
   }
 
   update(updatedUser: UserModel) {
-    return this.httpClient.patch('http://localhost:3000/users/me', updatedUser);
+    return this.httpClient.patch('http://localhost:3000/users/newpassword', updatedUser);
   }
 }
