@@ -3,6 +3,9 @@ import {RegistrationService} from '../../services/registration.service';
 import {UserModel} from '../../models/user.model';
 import {AuthenticationService} from '../../services/authentication.service';
 import {Router} from '@angular/router';
+import {NotificationService} from '../../services/notification.service';
+import {GroupsService} from '../../services/groups.service';
+
 
 @Component({
   selector: 'app-registration',
@@ -11,13 +14,19 @@ import {Router} from '@angular/router';
 })
 export class RegistrationComponent implements OnInit {
   userRegistration: UserModel;
+  list: Object;
 
   constructor(private registrationService: RegistrationService,
+              private notifier: NotificationService,
+              private groups: GroupsService,
               private router: Router) {
     this.userRegistration = new UserModel();
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.groups.listGroups()
+      .subscribe(result => this.list = result);
+  }
 
   registration() {
 
@@ -25,10 +34,12 @@ export class RegistrationComponent implements OnInit {
       this.registrationService.registration(this.userRegistration)
         .subscribe(
           () => {
-            console.log('sikeres regisztrácio');
+            const message = `Sikeres regisztrácio.`;
+            this.notifier.display('success', message);
             this.router.navigate(['']);
           }, error => {
-            alert('A megadott adat hibás, vagy már használatban van.');
+            const message = `A megadott adat hibás, vagy már használatban van.`;
+            this.notifier.display('success', message);
             console.log(error);
           });
     }
