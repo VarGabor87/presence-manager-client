@@ -46,12 +46,11 @@
           <i class="fa fa-users" id="icon"></i>
           <select type="text" id="group"
                   class="form-control" name="group"
-                  #email="ngModel" [(ngModel)]="userRegistration.group">
-            <option value="Mentor">Mentor</option>
-            <option value="TeamGamma">TeamGamma</option>
-            <option value="TeamDelta">TeamDelta</option>
-            <option value="Visitor">Visitor</option>
-            <option value="Admin">Admin</option>
+                  #email="ngModel" [(ngModel)]="userRegistration._group">
+            <option *ngFor="let listElement of list"
+                    [value]="listElement._id">
+              {{listElement.name}}
+            </option>
           </select>
       </div>
         <div class="form-group iconInside">

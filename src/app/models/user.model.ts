@@ -5,7 +5,7 @@ export class UserModel {
   public repeatPassword: String;
   public contractId: String;
   public accessLevel: String;
-  public group: String;
+  public _group: String;
   public isIn: Boolean;
   public isGeneratedPassword: Boolean;
   public logs: String;
