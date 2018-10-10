@@ -19,6 +19,9 @@ import { NewpasswordComponent } from './components/newpassword/newpassword.compo
 // import { UserComponent } from './components/user/user.component';
 import { SidebarMenuComponent } from './components/sidebar-menu/sidebar-menu.component';
 import { SidebarNamesComponent } from './components/sidebar-names/sidebar-names.component';
+import { NotificationComponent } from './components/notification/notification.component';
+import { NotificationService } from './services/notification.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 const appRoutes: Routes = [
@@ -42,6 +45,7 @@ const appRoutes: Routes = [
     // UserComponent,
     SidebarMenuComponent,
     SidebarNamesComponent,
+    NotificationComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +53,8 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule.forRoot(appRoutes),
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    BrowserAnimationsModule
   ],
   providers: [
     {
@@ -57,7 +62,7 @@ const appRoutes: Routes = [
       useClass: AuthInterceptor,
       multi: true
     },
-    AuthenticationService
+    AuthenticationService, NotificationService
   ],
   bootstrap: [AppComponent]
 })

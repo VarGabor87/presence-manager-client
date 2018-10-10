@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { UserModel } from '../../models/user.model';
 import { Router } from '@angular/router';
 import { UserupdateService } from '../../services/userupdate.service';
+import {NotificationService} from '../../services/notification.service';
 
 @Component({
   selector: 'app-newpassword',
@@ -16,6 +17,7 @@ export class NewpasswordComponent implements OnInit {
 
   constructor(
     private router: Router,
+    private notifier: NotificationService,
     private userupdateService: UserupdateService) {
     this.userData = new UserModel();
     this.userUpdateData = new UserModel();
@@ -39,11 +41,14 @@ export class NewpasswordComponent implements OnInit {
         .subscribe(
           (response) => {
             sessionStorage.setItem('is_generated_pw', 'false');
+            const message = `Jelszavadat sikeresen megváltoztattad.`;
+            this.notifier.display('success', message);
             this.router.navigate(['/']);
           },
           error => {
             if (error === 'Bad Request') {
-              console.log(error);
+            const message = `Jelszavadat megváltoztatása közben hiba történt!`;
+            this.notifier.display('error', message);
 
             }
           }
