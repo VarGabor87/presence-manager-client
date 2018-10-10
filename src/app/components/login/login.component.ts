@@ -4,6 +4,7 @@ import {AppStateService} from '../../app-state.service';
 import {LoginService} from '../../services/login.service';
 import {UserModel} from '../../models/user.model';
 import {Router} from '@angular/router';
+import {NotificationService} from '../../services/notification.service';
 
 @Component({
   selector: 'app-login',
@@ -18,6 +19,7 @@ export class LoginComponent implements OnInit {
   constructor(private authService: AuthenticationService,
               private appStateService: AppStateService,
               private router: Router,
+              private notifier: NotificationService,
               private loginService: LoginService) {
               this.userLogin = new UserModel();
   }
@@ -35,8 +37,12 @@ export class LoginComponent implements OnInit {
             const data = sessionStorage.getItem('is_generated_pw');
             this.appStateService.isLoggedIn();
             if (data === 'false') {
+              const message = `Sikeres bejelentkezés.`;
+              this.notifier.display('success', message);
               this.router.navigate(['']);
             } else {
+              const message = `Sikeres bejelentkezés. Változtasd meg a generált jelszavadat!`;
+              this.notifier.display('success', message);
               this.router.navigate(['/newpassword']);
             }
           }, error => {
