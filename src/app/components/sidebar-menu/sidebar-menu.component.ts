@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthenticationService} from '../../services/authentication.service';
+import {AppStateService} from '../../app-state.service';
 
 @Component({
   selector: 'app-sidebar-menu',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarMenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(private appStateService: AppStateService,
+              private authService: AuthenticationService) { }
 
   ngOnInit() {
   }
 
+  logout() {
+    this.authService.logout();
+    this.appStateService.isLoggedIn();
+  }
 }
