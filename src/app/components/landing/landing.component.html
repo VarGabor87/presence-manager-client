@@ -3,5 +3,8 @@
 <div class="content">
   <p>{{userData.name}}</p>
   <p>{{userData.email}}</p>
-  <p>{{userData.logs}}</p>
+  <div *ngFor="let userDatas of userData.logs;">
+    {{userDatas.subjectDate}} {{userDatas.firstCheckIn}} {{userDatas.lastCheckIn}}
+  </div>
 </div>
+
