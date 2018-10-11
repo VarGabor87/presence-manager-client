@@ -11,6 +11,7 @@ import { GroupsService } from '../../services/groups.service';
   styleUrls: ['./group.component.css']
 })
 export class GroupComponent implements OnInit {
+  group: GroupModel;
   groupRegistration: GroupModel;
 
   constructor(private notifier: NotificationService,

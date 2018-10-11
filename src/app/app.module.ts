@@ -12,11 +12,10 @@ import { RegistrationComponent } from './components/registration/registration.co
 import {AuthInterceptor} from './interceptors/auth.interceptor';
 import { LandingComponent } from './components/landing/landing.component';
 import { NewpasswordComponent } from './components/newpassword/newpassword.component';
-// import { RegistrationComponent } from './components/authregistration/registration.component';
-// import { GrouplistComponent } from './components/grouplist/grouplist.component';
+import { GrouplistComponent } from './components/grouplist/grouplist.component';
 import { GroupComponent } from './components/group/group.component';
-// import { UserslistComponent } from './components/userslist/userslist.component';
-// import { UserComponent } from './components/user/user.component';
+import { UserslistComponent } from './components/userslist/userslist.component';
+import { UserComponent } from './components/user/user.component';
 import { SidebarMenuComponent } from './components/sidebar-menu/sidebar-menu.component';
 import { SidebarNamesComponent } from './components/sidebar-names/sidebar-names.component';
 import { NotificationComponent } from './components/notification/notification.component';
@@ -40,11 +39,10 @@ const appRoutes: Routes = [
     RegistrationComponent,
     LandingComponent,
     NewpasswordComponent,
-    // RegistrationComponent,
-    // GrouplistComponent,
+    GrouplistComponent,
     GroupComponent,
-    // UserslistComponent,
-    // UserComponent,
+    UserslistComponent,
+    UserComponent,
     SidebarMenuComponent,
     SidebarNamesComponent,
     NotificationComponent,
