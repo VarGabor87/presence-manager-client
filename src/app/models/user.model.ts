@@ -1,3 +1,6 @@
+import {LogsModel} from './logs.model';
+import * as moment from 'moment';
+
 export class UserModel {
   public name: String;
   public email: String;
@@ -6,8 +9,7 @@ export class UserModel {
   public contractId: String;
   public accessLevel: String;
   public _group: String;
-  public isIn: Boolean;
   public isGeneratedPassword: Boolean;
-  public logs: String;
+  public logs: LogsModel[];
   public macAddress: String;
 }
