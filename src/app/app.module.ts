@@ -22,6 +22,11 @@ import { SidebarNamesComponent } from './components/sidebar-names/sidebar-names.
 import { NotificationComponent } from './components/notification/notification.component';
 import { NotificationService } from './services/notification.service';
 import {MatButtonModule} from '@angular/material/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { PlaygroundComponent } from './playground/playground.component';
+import { UserLogListComponent } from './components/user-log-list/user-log-list.component';
 
 
 const appRoutes: Routes = [
@@ -48,6 +53,8 @@ const appRoutes: Routes = [
     SidebarMenuComponent,
     SidebarNamesComponent,
     NotificationComponent,
+    PlaygroundComponent,
+    UserLogListComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,7 +63,10 @@ const appRoutes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(appRoutes),
     AngularFontAwesomeModule,
-    MatButtonModule
+    MatButtonModule,
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatPaginatorModule
   ],
   providers: [
     {
