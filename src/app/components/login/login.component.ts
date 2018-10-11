@@ -46,6 +46,8 @@ export class LoginComponent implements OnInit {
               this.router.navigate(['/newpassword']);
             }
           }, error => {
+              const message = `Hibás felhasználónév vagy jelszó`;
+              this.notifier.display('success', message);
             if (error === 'Bad Request') {
               this.loginService.isBadRequest.next(true);
             }

@@ -1,9 +1,10 @@
 <div class="sidebar-menu">
-  <img id="logo" src="../../assets/img/flow.png">
+  
   <div class="buttons">
-    <button type="button" class="btn mx-auto" title="Me" (click)="goToProfile()"><i class="fa fa-info"></i></button><br>
-    <button type="button" class="btn mx-auto" title="Add new user" (click)="logout()"><i class="fa fa-user-plus"></i></button><br>
-    <button type="button" class="btn mx-auto" title="Add new group" (click)="logout()"><i class="fa fa-users"></i></button><br>
-    <button routerLink="/login" type="button" class="btn mx-auto" title="Logout" (click)="logout()"><i class="fa fa-sign-out"></i></button><br>
+    <button mat-raised-button routerLink="/" type="button" class="btn mx-auto" title="Me" (click)="goToProfile()"><img id="logo" src="../../assets/img/flow.png"></button>
+    <button mat-raised-button type="button" class="btn mx-auto" title="Me" (click)="goToProfile()"><i class="fa fa-info"></i></button>
+    <button mat-raised-button routerLink="/registration" type="button" class="btn mx-auto" title="Add new user"><i class="fa fa-user-plus"></i></button>
+    <button mat-raised-button routerLink="/groups" type="button" class="btn mx-auto" title="Add new group"><i class="fa fa-users"></i></button>
+    <button mat-raised-button routerLink="/login" type="button" class="btn mx-auto" title="Logout" (click)="logout()"><i class="fa fa-sign-out"></i></button>
   </div>
 </div>
