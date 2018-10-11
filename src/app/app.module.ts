@@ -21,7 +21,7 @@ import { SidebarMenuComponent } from './components/sidebar-menu/sidebar-menu.com
 import { SidebarNamesComponent } from './components/sidebar-names/sidebar-names.component';
 import { NotificationComponent } from './components/notification/notification.component';
 import { NotificationService } from './services/notification.service';
-
+import {MatButtonModule} from '@angular/material/button';
 
 
 const appRoutes: Routes = [
@@ -56,6 +56,7 @@ const appRoutes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(appRoutes),
     AngularFontAwesomeModule,
+    MatButtonModule
   ],
   providers: [
     {
