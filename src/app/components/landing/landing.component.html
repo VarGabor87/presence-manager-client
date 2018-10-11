@@ -2,9 +2,7 @@
 <app-sidebar-names></app-sidebar-names>
 <div class="content">
   <p>{{userData.name}}</p>
-  <p>{{userData.email}}</p>
-  <div *ngFor="let userDatas of userData.logs;">
-    {{userDatas.subjectDate}} {{userDatas.firstCheckIn}} {{userDatas.lastCheckIn}}
-  </div>
+  <app-user-log-list [dataSource]="dataSource"></app-user-log-list>
 </div>
+
 

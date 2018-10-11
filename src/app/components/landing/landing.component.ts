@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {UserService} from '../../services/user.service';
 import {UserModel} from '../../models/user.model';
 import * as moment from 'moment';
+import {LogsModel} from '../../models/logs.model';
 
 @Component({
   selector: 'app-landing',
@@ -10,6 +11,7 @@ import * as moment from 'moment';
 })
 export class LandingComponent implements OnInit {
   userData: UserModel;
+  dataSource: LogsModel[];
 
   constructor(private user: UserService) { }
 
@@ -18,6 +20,7 @@ export class LandingComponent implements OnInit {
       .subscribe(result => {
         this.userData = result;
         this.convertOnlyTime();
+        this.dataSource = this.userData.logs;
       });
   }
 
