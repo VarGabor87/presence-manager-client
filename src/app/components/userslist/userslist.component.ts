@@ -9,14 +9,14 @@ import { UserupdateService } from '../../services/userupdate.service';
   styleUrls: ['./userslist.component.css']
 })
 export class UserslistComponent implements OnInit {
-  usersList: UserModel[];
+  userList: UserModel[];
 
   constructor(private userUpdateService: UserupdateService) { }
 
   ngOnInit() {
     this.userUpdateService.readAllUsers().subscribe((data) => {
-      this.usersList = data;
-      console.log(this.usersList);
+      this.userList = data;
+      console.log(this.userList);
     });
   }
 

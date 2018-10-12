@@ -1,14 +1,6 @@
-<div class="content">
-  <p>{{groupsList}}</p>
-  <p>{{groupsList[0].name}}</p>
-
-
-  <div class="asd" *ngFor="let groups of groupsList; let in = index">
-    {{groupsList[in]}}
-    
+<div class="content" *ngFor="let group of groupList; let i = index">
+  <h4>{{groupList[i].name}}</h4>
+  <div class="names" *ngFor="let name of namesList; let j = index">
+    <h6 *ngIf="groupList[i]._id === namesList[j][2]">{{namesList[j][0]}}</h6>
   </div>
 </div>
-
-<!--
-<p *ngFor groups of groupsList></p>
--->
