@@ -24,7 +24,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
-import { PlaygroundComponent } from './playground/playground.component';
+// import { PlaygroundComponent } from './playground/playground.component';
 import { UserLogListComponent } from './components/user-log-list/user-log-list.component';
 
 
@@ -51,7 +51,7 @@ const appRoutes: Routes = [
     SidebarMenuComponent,
     SidebarNamesComponent,
     NotificationComponent,
-    PlaygroundComponent,
+    // PlaygroundComponent,
     UserLogListComponent,
   ],
   imports: [
