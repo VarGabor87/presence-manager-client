@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { RouterModule, Routes} from '@angular/router';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -26,7 +26,9 @@ import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 // import { PlaygroundComponent } from './playground/playground.component';
 import { UserLogListComponent } from './components/user-log-list/user-log-list.component';
-
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { DropdownModule } from 'angular-bootstrap-md';
+import { ModalModule, TooltipModule, PopoverModule, ButtonsModule } from 'angular-bootstrap-md'
 
 const appRoutes: Routes = [
   { path: '', component:  LandingComponent},
@@ -64,8 +66,12 @@ const appRoutes: Routes = [
     MatButtonModule,
     BrowserAnimationsModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MDBBootstrapModule,
+    DropdownModule.forRoot(),
+    ModalModule, TooltipModule, PopoverModule, ButtonsModule
   ],
+  schemas: [ NO_ERRORS_SCHEMA ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
