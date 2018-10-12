@@ -20,4 +20,8 @@ export class UserupdateService {
   update(updatedUser: UserModel) {
     return this.httpClient.patch('http://localhost:3000/users/newpassword', updatedUser);
   }
+
+  readAllUsers(): Observable<any> {
+    return this.httpClient.get('http://localhost:3000/users/list/name');
+  }
 }
