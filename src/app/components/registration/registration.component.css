@@ -1,41 +1,26 @@
-img {
-  padding: 2%;
-}
-
 h3 {
   color: white;
   text-align: center;
+  padding: 20px 0;
 }
 
 p {
-  color: white;
+  color: #757575;
 }
 
-::placeholder {
-  color: rgb(190, 190, 190);;
-}
-
-.buttonInside {
-  position: relative;
-  margin-bottom: 10px;
+.form-top {
+  width: 100%;
+  background-color: #00bfb2;
 }
 
 #icon {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  border: none;
-  height: 30px;
-  width: 30px;
-  border-radius: 100%;
   outline: none;
-  font-weight: bold;
-  background-color: transparent;
-  color: rgb(190, 190, 190);
-  font-size: 20px;
+  color: #757575;
+
 }
 
-.iconInside {
+
+.buttonInside {
   position: relative;
   margin-bottom: 10px;
 }
@@ -43,16 +28,11 @@ p {
 .form-box {
   max-width: 30vw;
   min-width: 250px;
-  padding: 3%;
   border-radius: 0;
-  background-color: #304d6d;
-  margin-top: -80px;
+  margin: 30px 0 30px 0;
+  border: 2px solid #00bfb2;
 }
 
-.form-control {
-  border-radius: 0;
-  padding-left: 40px;
-}
 
 .btn {
   border: none;
@@ -65,7 +45,20 @@ p {
 .btn:hover {
   background-color: #06b1a5;
 }
+.example-container {
+  display: flex;
+  flex-direction: column;
+  padding: 8%;
+}
 
-#accessLevel {
-  
+.example-container > * {
+  width: 100%;
+}
+
+mat-form-field{
+  width: 100%;
+}
+
+.span {
+  width: 50px;
 }

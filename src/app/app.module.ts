@@ -26,9 +26,10 @@ import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 // import { PlaygroundComponent } from './playground/playground.component';
 import { UserLogListComponent } from './components/user-log-list/user-log-list.component';
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
-import { DropdownModule } from 'angular-bootstrap-md';
-import { ModalModule, TooltipModule, PopoverModule, ButtonsModule } from 'angular-bootstrap-md'
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import {MatIconModule} from '@angular/material/icon';
 
 const appRoutes: Routes = [
   { path: '', component:  LandingComponent},
@@ -67,9 +68,10 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     MatTableModule,
     MatPaginatorModule,
-    MDBBootstrapModule,
-    DropdownModule.forRoot(),
-    ModalModule, TooltipModule, PopoverModule, ButtonsModule
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatIconModule
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [

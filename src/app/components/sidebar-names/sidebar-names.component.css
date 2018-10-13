@@ -8,6 +8,7 @@
   position: fixed;
   min-height: 100% !important;
   right: 0px;
+  top: 0px;
   
   overflow-y: scroll;
   

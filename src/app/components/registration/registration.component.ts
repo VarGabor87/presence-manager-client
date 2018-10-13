@@ -40,7 +40,6 @@ export class RegistrationComponent implements OnInit {
           }, error => {
             const message = `A megadott adat hibás, vagy már használatban van.`;
             this.notifier.display('success', message);
-            console.log(error);
           });
     }
   }
