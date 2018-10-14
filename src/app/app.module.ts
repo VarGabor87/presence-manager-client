@@ -30,9 +30,13 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatIconModule} from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card';
+import {MatTooltipModule} from '@angular/material/tooltip';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
+
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -63,6 +67,7 @@ const appRoutes: Routes = [
     NotificationComponent,
     // PlaygroundComponent,
     UserLogListComponent,
+    UserProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -79,6 +84,8 @@ const appRoutes: Routes = [
     MatInputModule,
     MatSelectModule,
     MatIconModule,
+    MatTooltipModule,
+    MatCardModule,
     PerfectScrollbarModule
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
