@@ -30,6 +30,13 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatIconModule} from '@angular/material/icon';
+import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
+import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+
+const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
+  suppressScrollX: true
+};
 
 const appRoutes: Routes = [
   { path: '', component:  LandingComponent},
@@ -71,10 +78,15 @@ const appRoutes: Routes = [
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
-    MatIconModule
+    MatIconModule,
+    PerfectScrollbarModule
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [
+    {
+      provide: PERFECT_SCROLLBAR_CONFIG,
+      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
+    },
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,

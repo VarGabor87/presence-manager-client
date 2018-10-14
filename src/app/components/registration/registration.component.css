@@ -2,6 +2,7 @@ h3 {
   color: white;
   text-align: center;
   padding: 20px 0;
+  
 }
 
 p {
@@ -28,7 +29,7 @@ p {
 .form-box {
   max-width: 30vw;
   min-width: 250px;
-  border-radius: 0;
+  border-radius: 8px;
   margin: 30px 0 30px 0;
   border: 2px solid #00bfb2;
 }

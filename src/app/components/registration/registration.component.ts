@@ -29,7 +29,10 @@ export class RegistrationComponent implements OnInit {
   }
 
   registration() {
-
+    if (Object.keys(this.userRegistration).length < 6) {
+      const message = `Nem töltöttél ki minden mezőt`;
+      this.notifier.display('error', message);
+    }
     if (Object.keys(this.userRegistration).length === 6) {
       this.registrationService.registration(this.userRegistration)
         .subscribe(
@@ -39,7 +42,7 @@ export class RegistrationComponent implements OnInit {
             this.router.navigate(['']);
           }, error => {
             const message = `A megadott adat hibás, vagy már használatban van.`;
-            this.notifier.display('success', message);
+            this.notifier.display('error', message);
           });
     }
   }
