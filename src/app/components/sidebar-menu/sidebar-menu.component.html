@@ -12,10 +12,10 @@
     (click)="goToProfile()">
       <img id="logo" src="../../assets/img/flow.png">
     </button>
-    <button mat-raised-button routerLink="/registration" type="button" class="btn mx-auto" matTooltip="Új felhasználó" matTooltipPosition="right" >
+    <button *ngIf="accessLevelTester() === '0'" mat-raised-button routerLink="/registration" type="button" class="btn mx-auto" matTooltip="Új felhasználó" matTooltipPosition="right" >
       <i class="fa fa-user-plus fa-3x"></i>
     </button>
-    <button mat-raised-button routerLink="/groups" type="button" class="btn mx-auto" matTooltip="Új csoport" matTooltipPosition="right" >
+    <button *ngIf="accessLevelTester() === '0'" mat-raised-button routerLink="/groups" type="button" class="btn mx-auto" matTooltip="Új csoport" matTooltipPosition="right" >
       <i class="fa fa-users fa-3x"></i>
     </button>
     <button mat-raised-button routerLink="/login" type="button" class="btn mx-auto" matTooltip="Logout" matTooltipPosition="right" (click)="logout()">

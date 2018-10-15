@@ -1,0 +1,4 @@
+<div class="content" *ngFor="let group of groupList; let i = index">
+    <h4>{{groupList[i].name}}</h4>
+    <app-admin-userslist [(userByGroupList[i])]="userList"></app-admin-userslist>
+  </div>

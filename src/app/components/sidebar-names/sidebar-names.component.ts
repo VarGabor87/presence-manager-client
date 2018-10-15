@@ -18,7 +18,6 @@ export class SidebarNamesComponent implements OnInit {
     this.sidebarNamesService.getActuals()
       .subscribe((data) => {
         this.namesList = data;
-        console.log(this.namesList);
     });
   }
 
