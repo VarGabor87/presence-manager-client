@@ -22,6 +22,6 @@ export class UserupdateService {
   }
 
   readAllUsers(): Observable<any> {
-    return this.httpClient.get('http://localhost:3000/users/list/name');
+    return this.httpClient.get('http://localhost:3000/users/list/all');
   }
 }
