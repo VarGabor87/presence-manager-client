@@ -19,4 +19,8 @@ export class SidebarMenuComponent implements OnInit {
     this.authService.logout();
     this.appStateService.isLoggedIn();
   }
+  accessLevelTester() {
+    const accessLevel = sessionStorage.getItem('accessLevel');
+    return accessLevel;
+  }
 }

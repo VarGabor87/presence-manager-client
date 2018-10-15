@@ -2,10 +2,8 @@
   
   <div class="buttons">
     <button mat-raised-button routerLink="/" type="button" class="btn mx-auto" title="Me" (click)="goToProfile()"><img id="logo" src="../../assets/img/flow.png"></button>
-    <button mat-raised-button type="button" class="btn mx-auto" title="Me" (click)="goToProfile()"><i class="fa fa-info fa-3x"></i></button>
-    <button mat-raised-button routerLink="/registration" type="button" class="btn mx-auto" title="Add new user"><i class="fa fa-user-plus fa-3x"></i></button>
-    <button mat-raised-button routerLink="/groups" type="button" class="btn mx-auto" title="Add new group"><i class="fa fa-users fa-3x"></i></button>
-    <button mat-raised-button type="button" class="btn mx-auto" title="manualLogin"><i class="fa fa-clock fa-3x"></i></button>
+    <button *ngIf="accessLevelTester() === '0'" mat-raised-button routerLink="/registration" type="button" class="btn mx-auto" title="Add new user"><i class="fa fa-user-plus fa-3x"></i></button>
+    <button *ngIf="accessLevelTester() === '0'" mat-raised-button routerLink="/groups" type="button" class="btn mx-auto" title="Add new group"><i class="fa fa-users fa-3x"></i></button>
     <button mat-raised-button routerLink="/login" type="button" class="btn mx-auto" title="Logout" (click)="logout()"><i class="fa fa-sign-out fa-3x"></i></button>
   </div>
 </div>
