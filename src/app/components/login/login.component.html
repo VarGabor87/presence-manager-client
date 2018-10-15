@@ -1,33 +1,33 @@
 <div class="body"  *ngIf="!isLoggedIn">
-        <img src="../../assets/img/flow.png">
-        <div class="form-box mx-auto shadow">
-          <div class="form-top pb-4">
-            <h3>Login</h3>
-          </div>
-          
-          <div class="form-bottom">
-            <form role="form" #form="ngForm">
-              <div class="form-group iconInside">
-                <label class="sr-only" for="email">Email</label>
-                <i class="fa fa-envelope" id="icon"></i>
-                <input type="text" id="email"
-                class="form-control" name="email"
-                #email="ngModel" [(ngModel)]="userLogin.email"
-                placeholder="E-mail address" email />
-              </div>
-              <div class="form-group iconInside">
-                <label class="sr-only" for="password">Password</label>
-                <i class="fa fa-lock" id="icon"></i>
-                <input type="password" id="password"
-                         class="form-control" name="password"
-                         #email="ngModel" [(ngModel)]="userLogin.password"
-                         placeholder="Password">
-              </div>
-              <button (click)="login()" class="btn btn-block mt-5 mx-auto">SIGN IN</button>
-              <p class="forgotP pt-4">Forgot password?</p>
-            </form>
-          </div>
-      
-        </div>
+
+    <img src="../../assets/img/flow.png">
+    <div class="form-box mx-auto shadow">
+      <div class="form-top pb-4">
+        <h3>Login</h3>
       </div>
-      
+  
+      <div class="form-bottom">
+        <form role="form" #form="ngForm">
+          <div class="form-group iconInside">
+            <label class="sr-only" for="email">Email</label>
+            <i class="fa fa-envelope" id="icon"></i>
+            <input type="text" id="email"
+            class="form-control" name="email"
+            #email="ngModel" [(ngModel)]="userLogin.email"
+            placeholder="E-mail address" email />
+          </div>
+          <div class="form-group iconInside">
+            <label class="sr-only" for="password">Password</label>
+            <i class="fa fa-lock" id="icon"></i>
+            <input type="password" id="password"
+                     class="form-control" name="password"
+                     #email="ngModel" [(ngModel)]="userLogin.password"
+                     placeholder="Password">
+          </div>
+          <button (click)="login()" class="btn btn-block mt-5 mx-auto">SIGN IN</button>
+          <p class="forgotP pt-4">Forgot password?</p>
+        </form>
+      </div>
+  
+    </div>
+  </div>
