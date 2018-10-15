@@ -1,28 +1,23 @@
-
 <app-sidebar-menu></app-sidebar-menu>
 <app-sidebar-names></app-sidebar-names>
 <app-notification></app-notification>
 
-<div *ngIf="!isUserLoggedIn">
-  <img src="../../assets/img/flow.png">
-  <div class="form-box mx-auto shadow">
-    <div class="form-top pb-4">
-      <h3>Csoport készítése</h3>
-    </div>
+<div class="form-box mx-auto shadow" *ngIf="!isUserLoggedIn">
+  <div class="form-top">
+    <h3>Regisztráció</h3>
+  </div>
 
-    <div class="form-bottom">
-      <form role="form" #form="ngForm" class="registration-form">
-        <div class="form-group iconInside">
-          <label class="sr-only" for="group"></label>
-          <i class="fa fa-group" id="icon"></i>
-          <input type="text" id="group" class="form-control" name="group" #name="ngModel" [(ngModel)]="groupRegistration.name"
-            placeholder="Név" userName />
-        </div>
-     
-       
+  <div class="example-container">
+    <form role="form" #form="ngForm" class="registration-form">
 
-        <button (click)="addGroup()" class="btn btn-block mt-5 mx-auto">Létrehozás</button>
-      </form>
-    </div>
+      <mat-form-field>
+        <label class="sr-only" for="group">Name</label>
+        <span matPrefix><i class="fa fa-users" id="icon" style="margin: 0 6px"></i></span>
+        <input matInput type="text" id="group" name="group" #name="ngModel" [(ngModel)]="groupRegistration.name"
+          placeholder="Csoport" userName />
+      </mat-form-field>
+
+      <button (click)="addGroup()" class="btn btn-block mt-3 mx-auto">LÉTREHOZÁS</button>
+    </form>
   </div>
 </div>
