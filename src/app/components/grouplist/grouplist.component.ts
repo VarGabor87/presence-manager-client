@@ -18,7 +18,6 @@ export class GrouplistComponent implements OnInit {
   ngOnInit() {
     this.groupsService.listGroups().subscribe((data) => {
       this.groupList = data;
-      console.log(this.groupList);
     });
   }
 

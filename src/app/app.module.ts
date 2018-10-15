@@ -24,7 +24,6 @@ import {MatButtonModule} from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
-// import { PlaygroundComponent } from './playground/playground.component';
 import { UserLogListComponent } from './components/user-log-list/user-log-list.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
@@ -36,6 +35,10 @@ import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { AdminGrouplistComponent } from './components/admin-landing/admin-grouplist/admin-grouplist.component';
+import { AdminGroupComponent } from './components/admin-landing/admin-group/admin-group.component';
+import { AdminUserslistComponent } from './components/admin-landing/admin-userslist/admin-userslist.component';
+import { AdminUserComponent } from './components/admin-landing/admin-user/admin-user.component';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -65,9 +68,12 @@ const appRoutes: Routes = [
     SidebarMenuComponent,
     SidebarNamesComponent,
     NotificationComponent,
-    // PlaygroundComponent,
     UserLogListComponent,
     UserProfileComponent,
+    AdminGrouplistComponent,
+    AdminGroupComponent,
+    AdminUserslistComponent,
+    AdminUserComponent,
   ],
   imports: [
     BrowserModule,
