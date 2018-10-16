@@ -4,18 +4,21 @@
   }
   
 .example-header-image {
-    background-image: url('/assets/img/vargag.jpg');
+    /* background-image: url('/assets/img/vargag.jpg'); */
     background-size: cover;
     width: 150px;
     height: 150px;
-    border: 2px solid #f8ec77;
     margin-right: 30px;
     
   }
 
+.calendar {
+    background-image: url('/assets/img/calendar-background-images-.jpg')
+}
   mat-card {
     background-color: #304d6d;
     color: white;
+   
   }
   
   .mat-card-title {
@@ -31,10 +34,6 @@
       font-size: 20px;
       color: #f8ec77
   }
-
-  mat-card-button {
-      background-color: blueviolet !important;
-  } 
 
   .btn {
     color: white;
@@ -55,4 +54,9 @@
   .yellow-line {
       height: 20px;
       background-color: #f8ec77;
+  }
+
+  .fa-clock-o {
+      width: 100px;
+      height: 100px;
   }
