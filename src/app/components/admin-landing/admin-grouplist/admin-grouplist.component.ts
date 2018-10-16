@@ -20,14 +20,11 @@ export class AdminGrouplistComponent implements OnInit {
   ngOnInit() {
     this.groupsService.listGroups().subscribe((data) => {
       this.groupList = data;
-      console.log(this.groupList);
       this.userUpdateService.readAllUsers().subscribe((data2) => {
         this.userList = data2;
-        console.log(this.userList);
         for (let i = 0; i < this.groupList.length; i++) {
           this.usersByGroupList.push(this.selectUsersByGroup(this.groupList[i]._id));
         }
-        console.log(this.usersByGroupList);
       });
     });
 
@@ -44,5 +41,10 @@ export class AdminGrouplistComponent implements OnInit {
    return selectedUsers;
 
   }
+
+  public deleteGroupByID(id: String) {
+    const index = this.groupList.findIndex(groupElement => groupElement._id === id);
+    this.groupList.splice(index, 1);
+}
 
 }

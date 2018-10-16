@@ -1,0 +1,5 @@
+<p>{{log.subjectDate}} ---- {{log.firstCheckIn}} ---- {{log.lastCheckIn}}</p>
+<input type="text" *ngIf="isUnderEdit" value="{{log.firstCheckIn}}" [(ngModel)]="log.firstCheckIn"/>
+<input type="text" *ngIf="isUnderEdit" value="{{log.lastCheckIn}}" [(ngModel)]="log.lastCheckIn"/>
+<button (click)="editLog()" *ngIf="!isUnderEdit">Szerkesztés</button>
+<button (click)="saveLog()" *ngIf="isUnderEdit">Mentés</button>

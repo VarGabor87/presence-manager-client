@@ -8,8 +8,7 @@
     class="btn mx-auto"
     matTooltip="Saját adataim"
     matTooltipPosition="right"
-    matTooltipClass="tooltip-right"
-    (click)="goToProfile()">
+    matTooltipClass="tooltip-right">
       <img id="logo" src="../../assets/img/flow.png">
     </button>
     <button *ngIf="accessLevelTester() === '0'" mat-raised-button routerLink="/registration" type="button" class="btn mx-auto" matTooltip="Új felhasználó" matTooltipPosition="right" >

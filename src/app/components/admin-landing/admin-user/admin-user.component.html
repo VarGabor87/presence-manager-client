@@ -1,3 +1,11 @@
-<p>
-  admin-user works!
-</p>
+<p>{{user.name}} {{user.email}} {{user.macAddress}} {{user.contractId}}</p>
+<input type="text" *ngIf="isUnderEdit" value="{{user.name}}" [(ngModel)]="user.name"/>
+<input type="text" *ngIf="isUnderEdit" value="{{user.email}}" [(ngModel)]="user.email"/>
+<input type="text" *ngIf="isUnderEdit" value="{{user.macAddress}}" [(ngModel)]="user.macAddress"/>
+<input type="text" *ngIf="isUnderEdit" value="{{user.contractId}}" [(ngModel)]="user.contractId"/>
+
+<button (click)="editUser()" *ngIf="!isUnderEdit">Szerkesztés</button>
+<button (click)="saveUser()" *ngIf="isUnderEdit">Mentés</button>
+<button (click)="deleteUser()">Törlés</button>
+<button (click)="showLogs()">Logok megnyitása</button>
+<app-admin-loglist [(user)]="user" *ngIf="isLogListVisible"></app-admin-loglist>

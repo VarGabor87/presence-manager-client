@@ -19,18 +19,12 @@ export class LandingComponent implements OnInit {
     this.user.userData()
       .subscribe(result => {
         this.userData = result;
-        this.convertOnlyTime();
         this.dataSource = this.userData.logs;
       });
   }
 
-  convertOnlyTime () {
-    for (let i = 0; i < this.userData.logs.length; i++) {
-      // @ts-ignore
-      this.userData.logs[i].firstCheckIn = moment(this.userData.logs[i].firstCheckIn, 'MMMM Do YYYY, h:mm:ss a').format('h:mm:ss a');
-      // @ts-ignore
-      this.userData.logs[i].lastCheckIn = moment(this.userData.logs[i].lastCheckIn, 'MMMM Do YYYY, h:mm:ss a').format('h:mm:ss a');
-    }
+  accessLevelTester() {
+    const accessLevel = sessionStorage.getItem('accessLevel');
+    return accessLevel;
   }
-
 }

@@ -16,6 +16,13 @@ export class GroupsService {
 
   createGroup(createData: GroupModel) {
     return this.http.post('http://localhost:3000/groups/', createData);
+  }
 
+  deleteGroup(id: String) {
+    return this.http.delete(`http://localhost:3000/groups/${id}`);
+  }
+
+  editGroup(group: GroupModel) {
+    return this.http.patch('http://localhost:3000/groups/', group);
   }
 }

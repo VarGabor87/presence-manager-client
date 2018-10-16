@@ -39,6 +39,8 @@ import { AdminGrouplistComponent } from './components/admin-landing/admin-groupl
 import { AdminGroupComponent } from './components/admin-landing/admin-group/admin-group.component';
 import { AdminUserslistComponent } from './components/admin-landing/admin-userslist/admin-userslist.component';
 import { AdminUserComponent } from './components/admin-landing/admin-user/admin-user.component';
+import { AdminLoglistComponent } from './components/admin-landing/admin-loglist/admin-loglist.component';
+import { AdminLogComponent } from './components/admin-landing/admin-log/admin-log.component';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -74,6 +76,8 @@ const appRoutes: Routes = [
     AdminGroupComponent,
     AdminUserslistComponent,
     AdminUserComponent,
+    AdminLoglistComponent,
+    AdminLogComponent,
   ],
   imports: [
     BrowserModule,

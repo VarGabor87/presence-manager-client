@@ -1,3 +1,7 @@
-<p>
-  admin-group works!
-</p>
+<p>{{group.name}}</p>
+<input type="text" *ngIf="isUnderEdit" value="{{group.name}}" [(ngModel)]="group.name"/>
+<button (click)="editGroup()" *ngIf="!isUnderEdit">Csoport Szerkesztése</button>
+<button (click)="saveGroup()" *ngIf="isUnderEdit">Mentés</button>
+<button (click)="deleteGroup()">Csoport Törlése</button>
+<button (click)="showGroup()">Csoport Megnyitása</button>
+<app-admin-userslist *ngIf="showUserList" [(userList)]="userList" ></app-admin-userslist>

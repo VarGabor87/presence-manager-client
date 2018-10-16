@@ -1,3 +1,3 @@
-<div class="users" *ngFor="let user of userList">
-    <p>{{user.user}}</p>
+<div class="users" *ngFor="let user of userList; let i = index">
+  <app-admin-user [(user)]="userList[i]"></app-admin-user>
 </div>

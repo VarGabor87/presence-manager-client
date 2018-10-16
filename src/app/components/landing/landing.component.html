@@ -1,10 +1,9 @@
 <app-sidebar-menu></app-sidebar-menu>
 <app-sidebar-names></app-sidebar-names>
 <div class="content">
-  <app-user-profile></app-user-profile>
-  <app-user-log-list [dataSource]="dataSource"></app-user-log-list>
-<app-admin-grouplist></app-admin-grouplist>
-<app-admin-userslist></app-admin-userslist>
+  <app-user-profile *ngIf="accessLevelTester() != '0'"></app-user-profile>
+  <app-user-log-list *ngIf="accessLevelTester() != '0'" [dataSource]="dataSource"></app-user-log-list>
+<app-admin-grouplist *ngIf="accessLevelTester() === '0'"></app-admin-grouplist>
 </div>
 
 

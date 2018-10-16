@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SidebarNamesService } from '../../services/sidebar-names.service';
 import { UserModel } from '../../models/user.model';
+import {SidebarService} from '../../services/sidebar.service';
 
 
 @Component({
@@ -11,14 +12,13 @@ import { UserModel } from '../../models/user.model';
 export class SidebarNamesComponent implements OnInit {
   namesList: UserModel[];
 
-
-  constructor( private sidebarNamesService: SidebarNamesService ) { }
+  constructor( private sidebarService: SidebarService ) { }
 
   ngOnInit() {
-    this.sidebarNamesService.getActuals()
-      .subscribe((data) => {
+    this.sidebarService.namesList
+      .subscribe(data => {
         this.namesList = data;
-    });
+      });
   }
 
 }

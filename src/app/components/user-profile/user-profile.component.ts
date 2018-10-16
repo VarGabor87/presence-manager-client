@@ -23,14 +23,14 @@ export class UserProfileComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.userService.userData().subscribe(value => {
-      this.userData = value; console.log(value);
-    });
-    this.groupList.listGroups().subscribe(data => {
-      this.listGroups = data; console.log(data);
-      for (let i = 0; i < this.listGroups.length; i++) {
-       // TODO: groupname
-      });
+  //   this.userService.userData().subscribe(value => {
+  //     this.userData = value; console.log(value);
+  //   });
+  //   this.groupList.listGroups().subscribe(data => {
+  //     this.listGroups = data; console.log(data);
+  //     // for (let i = 0; i < this.listGroups.length; i++) {
+  //     //  // TODO: groupname
+  //     // });
   }
 }
 

@@ -2,6 +2,7 @@ import {LogsModel} from './logs.model';
 import * as moment from 'moment';
 
 export class UserModel {
+  public _id: String;
   public name: String;
   public email: String;
   public password: String;

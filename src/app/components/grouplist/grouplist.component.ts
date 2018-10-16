@@ -10,15 +10,21 @@ import { UserModel } from '../../models/user.model';
 })
 export class GrouplistComponent implements OnInit {
   groupList: GroupModel[];
-  @Input()
-  namesList: UserModel[];
+  @Input() namesList: UserModel[];
 
   constructor(private groupsService: GroupsService) { }
 
   ngOnInit() {
-    this.groupsService.listGroups().subscribe((data) => {
-      this.groupList = data;
-    });
+  }
+
+  deleteGroupById(id: String) {
+    const index = this.groupList.findIndex(groupElement => groupElement._id === id);
+    this.groupList.splice(index, 1);
+  }
+
+  editGroupById(group: GroupModel) {
+    const index = this.groupList.findIndex(groupElement => groupElement._id === group._id);
+    this.groupList[index] = group;
   }
 
 }
