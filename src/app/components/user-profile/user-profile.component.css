@@ -4,17 +4,20 @@
   }
   
 .example-header-image {
+
     background-size: cover;
     width: 150px;
     height: 150px;
     border: 5px solid #f8ec77;
-    margin-right: 30px;
-    
   }
 
+.calendar {
+    background-image: url('/assets/img/calendar-background-images-.jpg')
+}
   mat-card {
     background-color: #304d6d;
     color: white;
+   
   }
   
   .mat-card-title {
@@ -60,5 +63,4 @@
 
   .fa-pencil-square-o {
       color: #304d6d;
-
   }
