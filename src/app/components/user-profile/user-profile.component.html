@@ -2,12 +2,12 @@
     
   <mat-card-header>
     <div class="calendar"></div>
-    <div mat-card-avatar class="example-header-image"><i class="fa fa-clock-o" style="font-size:150px;color:#f8ec77"></i></div>
+    <div mat-card-avatar class="example-header-image"><i class="fa fa-calendar "></i></div>
     
     <mat-card-title>{{userData.name}}</mat-card-title>
-    <mat-card-subtitle>Team Codezillas</mat-card-subtitle>
+    <mat-card-subtitle>{{userData._group}}</mat-card-subtitle>
     <mat-card-subtitle id="date">2018.10.11 8:31</mat-card-subtitle>
-    <button mat-raised-button type="button" class="btn mx-auto" title="Bejelentkezés hozzáadása" (click)="addCheckIn()"><i class="fa fa-calendar fa-3x"></i></button>
+    <button mat-raised-button type="button" class="btn mx-auto" title="Bejelentkezés hozzáadása" (click)="addCheckIn()"><i class="fa fa-pencil-square-o fa-3x"></i></button>
   
   </mat-card-header>
 
