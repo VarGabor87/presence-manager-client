@@ -20,5 +20,9 @@ export class SidebarNamesComponent implements OnInit {
         this.namesList = data;
       });
   }
+  accessLevelTester() {
+    const accessLevel = sessionStorage.getItem('accessLevel');
+    return accessLevel;
+  }
 
 }

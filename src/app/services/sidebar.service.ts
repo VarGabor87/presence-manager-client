@@ -2,14 +2,18 @@ import { Injectable } from '@angular/core';
 import {BehaviorSubject} from 'rxjs';
 import {UserModel} from '../models/user.model';
 import {SidebarNamesService} from './sidebar-names.service';
+import { GroupsService } from '../services/groups.service';
+import { GroupModel } from '../models/group.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SidebarService {
+  groupList: GroupModel[];
   public namesList: BehaviorSubject<UserModel[]>;
 
-  constructor(private sidebarNamesService: SidebarNamesService) {
+  constructor(private groupsService: GroupsService,
+    private sidebarNamesService: SidebarNamesService) {
     this.getNamesList();
   }
 
