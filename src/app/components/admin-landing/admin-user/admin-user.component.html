@@ -1,11 +1,20 @@
-<p>{{user.name}} {{user.email}} {{user.macAddress}} {{user.contractId}}</p>
-<input type="text" *ngIf="isUnderEdit" value="{{user.name}}" [(ngModel)]="user.name"/>
-<input type="text" *ngIf="isUnderEdit" value="{{user.email}}" [(ngModel)]="user.email"/>
-<input type="text" *ngIf="isUnderEdit" value="{{user.macAddress}}" [(ngModel)]="user.macAddress"/>
-<input type="text" *ngIf="isUnderEdit" value="{{user.contractId}}" [(ngModel)]="user.contractId"/>
+<td class="users shadow row">
+	<div class="input col-10">
+		<input class="showfield" type="text" *ngIf="!isUnderEdit" value="{{user.name}}" [(ngModel)]="user.name" disabled />
+		<input class="editfield" type="text" *ngIf="isUnderEdit" value="{{user.name}}" [(ngModel)]="user.name" />
+		<input class="showfield" type="text" *ngIf="!isUnderEdit" value="{{user.email}}" [(ngModel)]="user.email" disabled />
+		<input class="editfield" type="text" *ngIf="isUnderEdit" value="{{user.email}}" [(ngModel)]="user.email" />
+		<input class="showfield" type="text" *ngIf="!isUnderEdit" value="{{user.macAddress}}" [(ngModel)]="user.macAddress" disabled />
+		<input class="editfield" type="text" *ngIf="isUnderEdit" value="{{user.macAddress}}" [(ngModel)]="user.macAddress" />
+		<input class="showfield" type="text" *ngIf="!isUnderEdit" value="{{user.contractId}}" [(ngModel)]="user.contractId" disabled />
+		<input class="editfield" type="text" *ngIf="isUnderEdit" value="{{user.contractId}}" [(ngModel)]="user.contractId" />
+	</div>
+	<div class="col-2">
+		<button (click)="editUser()" *ngIf="!isUnderEdit"><i class="fa fa-edit fa-1x"></i></button>
+		<button (click)="saveUser()" *ngIf="isUnderEdit"><i class="fa fa-floppy-o fa-1x"></i></button>
+		<button (click)="deleteUser()"><i class="fa fa-trash-o fa-1x"></i></button>
+		<button (click)="showLogs()"><i class="fa fa-caret-down fa-1x"></i></button>
+	</div>
+</td>
 
-<button (click)="editUser()" *ngIf="!isUnderEdit">Szerkesztés</button>
-<button (click)="saveUser()" *ngIf="isUnderEdit">Mentés</button>
-<button (click)="deleteUser()">Törlés</button>
-<button (click)="showLogs()">Logok megnyitása</button>
 <app-admin-loglist [(user)]="user" *ngIf="isLogListVisible"></app-admin-loglist>

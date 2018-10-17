@@ -1,0 +1,20 @@
+.header{
+    background-color: rgb(230, 230, 230);
+    border-left: 6px solid #304d6d;
+		border-right: 2px solid #304d6d;
+		border-bottom: 1px solid #304d6d;
+    padding-left: 24px;
+}
+
+.headertag {
+    color: #304d6d;
+    font-size: 16px;
+    height: 32px !important;
+    background-color: rgb(230, 230, 230);
+    width: 153px;
+    margin-top: 6px;
+}
+
+p {
+    color: #088078;
+}

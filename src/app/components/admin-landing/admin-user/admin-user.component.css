@@ -1,0 +1,53 @@
+.users {
+    width: 100%;
+    color: #304d6d;
+    background-color: #fff8b2;
+    border: 1px solid #304d6d;
+    border-left: 6px solid #304d6d;
+    border-right: 2px solid #304d6d;
+    padding: 5px 9px;
+    height: 40px;   
+}
+
+.showfield {
+    background-color:#fff8b2;
+    border: 0;
+    color: #304d6d;
+    font-size: 16px;
+    height: 32px !important;
+    width: 153px;
+    margin-top: -1px;
+}
+
+.editfield {
+    background-color: #00bfb2;
+    border: 0;
+    color: #304d6d;
+    font-size: 16px;
+    height: 32px !important;
+    background-color: white;
+    border: 1px solid #304d6d;
+    padding-left: 5px;
+    width: 151px;
+    margin-top:-1px;
+}
+button {
+    background-color: #fff8b2;
+    color: #304d6d;
+    float: right;
+    border: 0;
+    width: 30px;
+}
+
+button:hover {
+    color: #304d6d
+}
+
+
+h3 {
+    margin: 10px 0 0 10px;
+}
+
+.input {
+    height: 24px !important;
+}

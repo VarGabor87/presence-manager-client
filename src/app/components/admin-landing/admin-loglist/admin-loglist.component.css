@@ -1,15 +1,17 @@
-.example-container {
-  overflow: auto;
-}
-table {
-  width: 100%;
-
-}
-
-mat-table {
-  z-index: 1 !important;
+.header{
+  background-color: white;
+  border-left: 10px solid #304d6d;
+  border-right: 2px solid #304d6d;
+  border-bottom: 1px solid #304d6d;
+  padding-left: 20px;
+  
 }
 
-.mat-header-cell {
-  z-index: 1 !important;
+.headertag {
+  color:#00bfb2;
+  font-size: 16px;
+  height: 32px !important;
+  background-color: white;
+  width: 153px;
+  margin-top: 6px;
 }

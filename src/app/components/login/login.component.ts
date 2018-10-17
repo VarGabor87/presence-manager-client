@@ -37,8 +37,6 @@ export class LoginComponent implements OnInit {
             const data = sessionStorage.getItem('is_generated_pw');
             this.appStateService.isLoggedIn();
             if (data === 'false') {
-              const message = `teszt`;
-              this.notifier.display('success', message);
               this.router.navigate(['']);
             } else {
               const message = `Sikeres bejelentkezés. Változtasd meg a generált jelszavadat!`;
