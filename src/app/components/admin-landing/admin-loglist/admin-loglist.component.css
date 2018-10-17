@@ -3,15 +3,19 @@
   border-left: 10px solid #304d6d;
   border-right: 2px solid #304d6d;
   border-bottom: 1px solid #304d6d;
-  padding-left: 20px;
+  padding-left: 16px;
   
 }
 
 .headertag {
-  color:#00bfb2;
   font-size: 16px;
   height: 32px !important;
   background-color: white;
-  width: 153px;
+  width: 175px;
   margin-top: 6px;
+}
+
+p {
+  color: #00bfb2;
+  font-weight: bold;
 }
