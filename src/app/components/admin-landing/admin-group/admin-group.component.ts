@@ -17,7 +17,8 @@ export class AdminGroupComponent implements OnInit {
   isUnderEdit: Boolean;
 
   constructor(private adminGroupListComponent: AdminGrouplistComponent,
-              private groupService: GroupsService) {
+              private groupService: GroupsService,
+              ) {
   }
 
   ngOnInit() {
