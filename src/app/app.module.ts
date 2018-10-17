@@ -41,7 +41,7 @@ import { AdminUserslistComponent } from './components/admin-landing/admin-usersl
 import { AdminUserComponent } from './components/admin-landing/admin-user/admin-user.component';
 import { AdminLoglistComponent } from './components/admin-landing/admin-loglist/admin-loglist.component';
 import { AdminLogComponent } from './components/admin-landing/admin-log/admin-log.component';
-
+import {MatDialogModule} from '@angular/material/dialog';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -94,6 +94,7 @@ const appRoutes: Routes = [
     MatInputModule,
     MatSelectModule,
     MatIconModule,
+    MatDialogModule,
     MatTooltipModule,
     MatCardModule,
     PerfectScrollbarModule
