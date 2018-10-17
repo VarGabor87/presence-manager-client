@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {UserModel} from '../../../models/user.model';
 import {UserService} from '../../../services/user.service';
 import {AdminUserslistComponent} from '../admin-userslist/admin-userslist.component';
+import {SidebarService} from '../../../services/sidebar.service';
 
 @Component({
   selector: 'app-admin-user',
@@ -14,7 +15,8 @@ export class AdminUserComponent implements OnInit {
   isLogListVisible: Boolean;
 
   constructor(private userService: UserService,
-              private adminUserListComponent: AdminUserslistComponent ) { }
+              private adminUserListComponent: AdminUserslistComponent,
+              private sidebarService: SidebarService) { }
 
   ngOnInit() {
     this.isUnderEdit = false;
@@ -31,6 +33,7 @@ export class AdminUserComponent implements OnInit {
         if (this.isUnderEdit === true) {
           this.isUnderEdit = false;
         }
+        this.sidebarService.getNamesList();
       });
   }
 
@@ -38,6 +41,7 @@ export class AdminUserComponent implements OnInit {
     this.userService.deleteUser(this.user._id)
       .subscribe(() => {
         this.adminUserListComponent.deleteUserById(this.user._id);
+        this.sidebarService.getNamesList();
       });
   }
 

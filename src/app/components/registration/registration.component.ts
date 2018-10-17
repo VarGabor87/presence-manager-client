@@ -5,6 +5,7 @@ import {AuthenticationService} from '../../services/authentication.service';
 import {Router} from '@angular/router';
 import {NotificationService} from '../../services/notification.service';
 import {GroupsService} from '../../services/groups.service';
+import {SidebarService} from '../../services/sidebar.service';
 
 
 @Component({
@@ -19,7 +20,8 @@ export class RegistrationComponent implements OnInit {
   constructor(private registrationService: RegistrationService,
               private notifier: NotificationService,
               private groups: GroupsService,
-              private router: Router) {
+              private router: Router,
+              private sideBarService: SidebarService) {
     this.userRegistration = new UserModel();
   }
 
@@ -40,6 +42,7 @@ export class RegistrationComponent implements OnInit {
             const message = `Sikeres regisztrácio.`;
             this.notifier.display('success', message);
             this.router.navigate(['']);
+            this.sideBarService.getNamesList();
           }, error => {
             const message = `A megadott adat hibás, vagy már használatban van.`;
             this.notifier.display('error', message);

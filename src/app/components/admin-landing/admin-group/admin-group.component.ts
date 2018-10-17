@@ -4,6 +4,7 @@ import {UserModel} from '../../../models/user.model';
 import {GrouplistComponent} from '../../grouplist/grouplist.component';
 import {AdminGrouplistComponent} from '../admin-grouplist/admin-grouplist.component';
 import {GroupsService} from '../../../services/groups.service';
+import {SidebarService} from '../../../services/sidebar.service';
 
 @Component({
   selector: 'app-admin-group',
@@ -17,7 +18,8 @@ export class AdminGroupComponent implements OnInit {
   isUnderEdit: Boolean;
 
   constructor(private adminGroupListComponent: AdminGrouplistComponent,
-              private groupService: GroupsService) {
+              private groupService: GroupsService,
+              private sidebarService: SidebarService) {
   }
 
   ngOnInit() {
@@ -33,7 +35,7 @@ export class AdminGroupComponent implements OnInit {
     this.groupService.deleteGroup(this.group._id)
       .subscribe( () => {
         this.adminGroupListComponent.deleteGroupByID(this.group._id);
-        // this.groupListComponent.deleteGroupById(this.group._id);
+        this.sidebarService.getGroupList();
       });
   }
 
@@ -46,7 +48,7 @@ export class AdminGroupComponent implements OnInit {
       if (this.isUnderEdit === true) {
         this.isUnderEdit = false;
       }
-      // this.groupListComponent.editGroupById(this.group);
+      this.sidebarService.getGroupList();
     });
   }
 }
