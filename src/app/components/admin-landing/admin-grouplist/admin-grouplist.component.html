@@ -1,0 +1,3 @@
+<div class="content" *ngFor="let group of groupList; let i = index">
+  <app-admin-group [(group)]="groupList[i]" [(userList)]="usersByGroupList[i]"></app-admin-group>
+  </div>

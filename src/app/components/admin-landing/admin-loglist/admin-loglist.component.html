@@ -1,0 +1,14 @@
+<div class="header col-12 row">
+    <div class="headertag">
+      <p>Dátum</p>
+    </div>
+    <div class="headertag">
+      <p>Első </p>
+    </div>
+    <div class="headertag">
+      <p>Utolsó </p>
+    </div>
+  </div>
+<div class="content" *ngFor="let log of logList; let i = index">
+  <app-admin-log [(log)]="logList[i]" [(user)]="user"></app-admin-log>
+</div>

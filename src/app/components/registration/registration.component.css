@@ -1,0 +1,65 @@
+h3 {
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  
+}
+
+p {
+  color: #757575;
+}
+
+.form-top {
+  width: 100%;
+  background-color: #00bfb2;
+}
+
+#icon {
+  outline: none;
+  color: #757575;
+
+}
+
+
+.buttonInside {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.form-box {
+  max-width: 30vw;
+  min-width: 250px;
+  border-radius: 8px;
+  margin: 30px 0 30px 0;
+  border: 2px solid #00bfb2;
+}
+
+
+.btn {
+  border: none;
+  border-radius: 0;
+  background-color: #00bfb2;
+  color: white;
+  width: 200px;
+}
+
+.btn:hover {
+  background-color: #06b1a5;
+}
+.example-container {
+  display: flex;
+  flex-direction: column;
+  padding: 8%;
+}
+
+.example-container > * {
+  width: 100%;
+}
+
+mat-form-field{
+  width: 100%;
+}
+
+.span {
+  width: 50px;
+}

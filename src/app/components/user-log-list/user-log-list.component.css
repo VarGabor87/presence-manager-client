@@ -1,0 +1,15 @@
+.example-container {
+  overflow: auto;
+}
+table {
+  width: 100%;
+
+}
+
+mat-table {
+  z-index: 1 !important;
+}
+
+.mat-header-cell {
+  z-index: 1 !important;
+}

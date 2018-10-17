@@ -1,0 +1,15 @@
+.sidebar-names {
+  min-height: 100%;
+  width: 250px;
+  z-index: 1;
+  background-color: #304d6d;
+  padding-top: 20px;
+  padding-left: 10px;
+  position: fixed;
+  min-height: 100% !important;
+  right: 0px;
+  top: 0px;
+  
+  overflow-y: scroll;
+  
+}

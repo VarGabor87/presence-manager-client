@@ -1,0 +1,17 @@
+<td class="logs shadow row">
+	<div class="input">
+
+		<input class="showfield" type="text" value="{{log.subjectDate}}" [(ngModel)]="log.subjectDate" disabled />
+		<input class="showfield" type="text" *ngIf="!isUnderEdit" value="{{log.firstCheckIn}}" [(ngModel)]="log.firstCheckIn"
+		 disabled />
+		<input class="editfield" type="text" *ngIf="isUnderEdit" value="{{log.firstCheckIn}}" [(ngModel)]="log.firstCheckIn" />
+		<input class="showfield" type="text" *ngIf="!isUnderEdit" value="{{log.lastCheckIn}}" [(ngModel)]="log.lastCheckIn"
+		 disabled />
+		<input class="editfield" type="text" *ngIf="isUnderEdit" value="{{log.lastCheckIn}}" [(ngModel)]="log.lastCheckIn" />
+	</div>
+	<div class="icons">
+		<button (click)="editLog()" *ngIf="!isUnderEdit"><i class="fa fa-edit fa-1x"></i></button>
+		<button (click)="saveLog()" *ngIf="isUnderEdit"><i class="fa fa-floppy-o fa-1x"></i></button>
+	</div>
+
+</td>

@@ -1,0 +1,23 @@
+<app-sidebar-menu></app-sidebar-menu>
+<app-sidebar-names></app-sidebar-names>
+<app-notification></app-notification>
+
+<div class="form-box mx-auto shadow" *ngIf="!isUserLoggedIn">
+  <div class="form-top">
+    <h3>Regisztráció</h3>
+  </div>
+
+  <div class="example-container">
+    <form role="form" #form="ngForm" class="registration-form">
+
+      <mat-form-field>
+        <label class="sr-only" for="group">Name</label>
+        <span matPrefix><i class="fa fa-users" id="icon" style="margin: 0 6px"></i></span>
+        <input matInput type="text" id="group" name="group" #name="ngModel" [(ngModel)]="groupRegistration.name"
+          placeholder="Csoport" userName />
+      </mat-form-field>
+
+      <button (click)="addGroup()" class="btn btn-block mt-3 mx-auto">LÉTREHOZÁS</button>
+    </form>
+  </div>
+</div>

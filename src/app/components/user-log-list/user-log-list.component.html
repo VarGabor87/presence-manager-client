@@ -1,0 +1,26 @@
+
+  <div class="example-container mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource">
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="subjectDate">
+        <th mat-header-cell *matHeaderCellDef> Date </th>
+        <td mat-cell *matCellDef="let element"> {{element.subjectDate}} </td>
+      </ng-container>
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="firstCheckIn">
+        <th mat-header-cell *matHeaderCellDef> First Check-in </th>
+        <td mat-cell *matCellDef="let element"> {{element.firstCheckIn}} </td>
+      </ng-container>
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="lastCheckIn">
+        <th mat-header-cell *matHeaderCellDef> Last Check-in </th>
+        <td mat-cell *matCellDef="let element"> {{element.lastCheckIn}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>

@@ -1,0 +1,22 @@
+<td class="users shadow row">
+	<div class="input fields">
+		<input class="showfield" type="text" *ngIf="!isUnderEdit" value="{{user.name}}" [(ngModel)]="user.name" disabled />
+		<input class="editfield" type="text" *ngIf="isUnderEdit" value="{{user.name}}" [(ngModel)]="user.name" />
+		<input class="showfield" type="text" *ngIf="!isUnderEdit" value="{{user.macAddress}}" [(ngModel)]="user.macAddress" disabled />
+		<input class="editfield" type="text" *ngIf="isUnderEdit" value="{{user.macAddress}}" [(ngModel)]="user.macAddress" />
+		<input class="showfield" type="text" *ngIf="!isUnderEdit" value="{{user.contractId}}" [(ngModel)]="user.contractId" disabled />
+		<input class="editfield" type="text" *ngIf="isUnderEdit" value="{{user.contractId}}" [(ngModel)]="user.contractId" />
+		<input class="showfield email" type="text" *ngIf="!isUnderEdit" value="{{user.email}}" [(ngModel)]="user.email" disabled />
+		<input class="editfield email" type="text" *ngIf="isUnderEdit" value="{{user.email}}" [(ngModel)]="user.email" />
+
+	</div>
+	<div class="icons">
+		<button (click)="editUser()" *ngIf="!isUnderEdit"><i class="fa fa-edit fa-1x"></i></button>
+		<button (click)="saveUser()" *ngIf="isUnderEdit"><i class="fa fa-floppy-o fa-1x"></i></button>
+		<button (click)="deleteUser()"><i class="fa fa-trash-o fa-1x"></i></button>
+		<button *ngIf="isLogListVisible" (click)="showLogs()"><i class="fa fa-caret-up fa-1x"></i></button>
+		<button *ngIf="!isLogListVisible" (click)="showLogs()"><i class="fa fa-caret-down fa-1x"></i></button>
+	</div>
+</td>
+
+<app-admin-loglist [(user)]="user" *ngIf="isLogListVisible"></app-admin-loglist>

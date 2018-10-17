@@ -1,0 +1,15 @@
+<td class="groups shadow row">
+	<div class="input col-8">
+		<input class="showfield" type="text" *ngIf="!isUnderEdit" value="{{group.name}}" [(ngModel)]="group.name" disabled/>
+		<input class="editfield" type="text" *ngIf="isUnderEdit" value="{{group.name}}" [(ngModel)]="group.name" />
+	</div>
+	<div class="col-4">
+		<button (click)="editGroup()" *ngIf="!isUnderEdit"><i class="fa fa-edit fa-2x"></i></button>
+		<button (click)="saveGroup()" *ngIf="isUnderEdit"><i class="fa fa-floppy-o fa-2x"></i></button>
+		<button (click)="deleteGroup()"><i class="fa fa-trash-o fa-2x"></i></button>
+		<button *ngIf="showUserList" (click)="showGroup()"><i class="fa fa-caret-up fa-3x" aria-hidden="true"></i></button>
+		<button *ngIf="!showUserList" (click)="showGroup()"><i class="fa fa-caret-down fa-3x" aria-hidden="true"></i></button>
+
+	</div>
+</td>
+<app-admin-userslist *ngIf="showUserList" [(userList)]="userList"></app-admin-userslist>

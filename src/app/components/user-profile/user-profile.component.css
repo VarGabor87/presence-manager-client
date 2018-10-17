@@ -1,0 +1,64 @@
+.example-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+.example-header-image {
+
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+    border: 5px solid #f8ec77;
+    margin-right: 20px;
+  }
+
+  mat-card {
+    background-color: #304d6d;
+    color: white;
+   
+  }
+  
+  .mat-card-title {
+      font-size: 40px;
+  }
+
+  .mat-card-subtitle {
+      font-size: 25px;
+      color: white;
+  }
+
+  #date {
+      font-size: 20px;
+      color: #f8ec77
+  }
+
+  .btn {
+    color: white;
+    background-color: #f8ec77;
+    border-radius: 0;
+    width: 75px;
+    height: 75px;
+    margin: 17px 0 17px 15px !important;
+    border-radius: 0.5rem;
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+  }
+   .btn:hover {
+    background-color: #088078;
+  }
+
+  .yellow-line {
+      height: 20px;
+      background-color: #f8ec77;
+  }
+
+  .fa-calendar {
+      margin: 25px 34px;
+      font-size:80px;
+      color:#f8ec77;
+  }
+
+  .fa-pencil-square-o {
+      color: #304d6d;
+  }

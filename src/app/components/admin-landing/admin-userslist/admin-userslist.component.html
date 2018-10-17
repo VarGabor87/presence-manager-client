@@ -1,0 +1,17 @@
+<div class="header col-12 row">
+  <div class="headertag">
+    <p><b>Felhasználónév</b></p>
+  </div>
+  <div class="headertag">
+    <p>Csapat</p>
+  </div>
+  <div class="headertag">
+    <p>Szerződésszám</p>
+  </div>
+  <div class="headertag">
+    <p>E-mail cím</p>
+  </div>
+</div>
+<div class="users" *ngFor="let user of userList; let i = index">
+  <app-admin-user [(user)]="userList[i]"></app-admin-user>
+</div>
