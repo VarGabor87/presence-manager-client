@@ -1,4 +1,4 @@
-<td class="users shadow row">
+<td class="users row">
 	<div class="input fields">
 		<input class="showfield" type="text" *ngIf="!isUnderEdit" value="{{user.name}}" [(ngModel)]="user.name" disabled />
 		<input class="editfield" type="text" *ngIf="isUnderEdit" value="{{user.name}}" [(ngModel)]="user.name" />
@@ -8,7 +8,6 @@
 		<input class="editfield" type="text" *ngIf="isUnderEdit" value="{{user.contractId}}" [(ngModel)]="user.contractId" />
 		<input class="showfield email" type="text" *ngIf="!isUnderEdit" value="{{user.email}}" [(ngModel)]="user.email" disabled />
 		<input class="editfield email" type="text" *ngIf="isUnderEdit" value="{{user.email}}" [(ngModel)]="user.email" />
-
 	</div>
 	<div class="icons">
 		<button (click)="editUser()" *ngIf="!isUnderEdit"><i class="fa fa-edit fa-1x"></i></button>
