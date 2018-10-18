@@ -10,5 +10,5 @@
     </div>
   </div>
 <div class="content" *ngFor="let log of logList; let i = index">
-  <app-admin-log [(log)]="logList[i]"></app-admin-log>
+  <app-admin-log [(log)]="logList[i]" [(user)]="user"></app-admin-log>
 </div>

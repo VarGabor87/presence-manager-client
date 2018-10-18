@@ -1,5 +1,5 @@
 <div class="content" *ngFor="let group of groupList; let i = index">
-  <h4>{{groupList[i].name}}</h4>
+  <h5>{{groupList[i].name}}</h5>
   <div class="names" *ngFor="let name of namesList; let j = index">
     <h6 *ngIf="groupList[i]._id === namesList[j]._group">{{namesList[j].name}}</h6>
   </div>

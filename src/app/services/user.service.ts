@@ -27,7 +27,18 @@ export class UserService {
     return this.http.delete(`http://localhost:3000/users/${id}`);
   }
 
-  editLogBySubjectDate(log: LogsModel) {
-    return this.http.patch('http://localhost:3000/users/presence/edit', log)
+  editLogBySubjectDate(log: LogsModel, macAddress: String) {
+    const body = {
+        macAddress: macAddress,
+        subjectDate: log.subjectDate,
+        firstCheckIn: log.firstCheckIn,
+        lastCheckIn: log.lastCheckIn
+      };
+    return this.http.patch('http://localhost:3000/users/presence/edit',
+      body);
+  }
+
+  manualCheckIn() {
+    return this.http.get('http://localhost:3000/userga s/presence/manual');
   }
 }

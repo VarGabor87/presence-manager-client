@@ -15,6 +15,7 @@ export class SidebarNamesComponent implements OnInit {
   constructor( private sidebarService: SidebarService ) { }
 
   ngOnInit() {
+    this.sidebarService.getNamesList();
     this.sidebarService.namesList
       .subscribe(data => {
         this.namesList = data;

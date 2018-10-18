@@ -3,6 +3,7 @@ import { GroupModel } from '../../models/group.model';
 import { NotificationService } from '../../services/notification.service';
 import { Router } from '@angular/router';
 import { GroupsService } from '../../services/groups.service';
+import {SidebarService} from '../../services/sidebar.service';
 
 
 @Component({
@@ -16,7 +17,8 @@ export class GroupComponent implements OnInit {
 
   constructor(private notifier: NotificationService,
               private groups: GroupsService,
-              private router: Router
+              private router: Router,
+              private sidebarService: SidebarService,
   ) {
     this.groupRegistration = new GroupModel();
   }
@@ -25,7 +27,6 @@ export class GroupComponent implements OnInit {
   }
 
   addGroup() {
-
     if (Object.keys(this.groupRegistration).length === 1) {
       this.groups.createGroup(this.groupRegistration)
         .subscribe(
@@ -33,12 +34,14 @@ export class GroupComponent implements OnInit {
             const message = `Létrehoztál egy új csoportot`;
             this.notifier.display('success', message);
             this.router.navigate(['']);
+            this.sidebarService.getGroupList();
           }, error => {
             const message = `A csoport készítése közben hiba történt`;
             this.notifier.display('success', message);
             console.log(error);
           });
     }
+
   }
 
 }

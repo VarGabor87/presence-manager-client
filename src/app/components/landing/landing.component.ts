@@ -16,6 +16,10 @@ export class LandingComponent implements OnInit {
   constructor(private user: UserService) { }
 
   ngOnInit() {
+    this.extracted();
+  }
+
+  public extracted() {
     this.user.userData()
       .subscribe(result => {
         this.userData = result;

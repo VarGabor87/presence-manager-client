@@ -1,3 +1,10 @@
 <div class="sidebar-names" *ngIf="accessLevelTester() === '0'">
+  <div class="top row">
+
+    <i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i>
+    <h4>Aktív<br> felhasználók</h4>
+
+  </div>
+
   <app-grouplist [namesList]="namesList"></app-grouplist>
 </div>

@@ -9,7 +9,22 @@
   min-height: 100% !important;
   right: 0px;
   top: 0px;
-  
   overflow-y: scroll;
-  
+}
+
+.top {
+  color: #fff8b2;
+  width:243px;
+}
+
+.fa {
+  margin: 5px 10px 5px 17px;
+}
+
+hr {
+  color: #fff8b2;
+}
+
+.text {
+  margin-left: -5px;
 }
