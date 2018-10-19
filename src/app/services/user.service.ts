@@ -39,6 +39,6 @@ export class UserService {
   }
 
   manualCheckIn() {
-    return this.http.get('http://localhost:3000/userga s/presence/manual');
+    return this.http.get('http://localhost:3000/users/presence/manual');
   }
 }

@@ -6,6 +6,7 @@
     border-left: 2px solid #304d6d;
     border-right: 2px solid #304d6d;
     color: white;
+    position: relative;
 }
 
 button {
@@ -17,6 +18,7 @@ button {
     padding-top: 10px;
     margin-left: 10px;
     width: 50px;
+    outline: none;
 }
 
 button:hover {
@@ -44,6 +46,6 @@ button:hover {
 }
 
 .icons {
-    display: flex;
-    flex-wrap: nowrap;
+    position: absolute;
+    right: 0;
 } 

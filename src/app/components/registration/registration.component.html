@@ -2,66 +2,68 @@
 <app-sidebar-names></app-sidebar-names>
 
 
-  <div class="form-box mx-auto shadow" *ngIf="!isUserLoggedIn">
-    <div class="form-top">
-      <h3>Regisztráció</h3>
-    </div>
+<div class="form-box mx-auto shadow">
+  <div class="form-top">
+    <h3>Regisztráció</h3>
+  </div>
 
-    <div class="example-container">
-      <form role="form" #form="ngForm" class="registration-form">
-          
-        <mat-form-field>
-          <label class="sr-only" for="userName">Name</label>
-          <span matPrefix><i class="fa fa-user" id="icon" style="margin: 0 11px"></i></span>
-          <input matInput type="text" id="userName" name="userName" #name="ngModel" [(ngModel)]="userRegistration.name" placeholder="Név"
-            userName />
-        </mat-form-field>
-        
-        
+  <div class="example-container">
+    <form role="form" #form="ngForm" class="registration-form">
 
-        <mat-form-field>
-          <label class="sr-only" for="email">Email</label>
-          <span matPrefix><i class="fa fa-envelope" id="icon" style="margin: 0 8px"></i></span>
-          <input matInput type="email" id="email" name="email" #email="ngModel" [(ngModel)]="userRegistration.email" placeholder="E-mail cím" 
-            email />
-        </mat-form-field>
+      <mat-form-field>
+        <label class="sr-only" for="userName">Name</label>
+        <span matPrefix><i class="fa fa-user" id="icon" style="margin: 0 11px"></i></span>
+        <input matInput type="text" id="userName" name="userName" #name="ngModel" [(ngModel)]="userRegistration.name"
+          placeholder="Név" userName />
+      </mat-form-field>
 
-        <mat-form-field>
-          <label class="sr-only" for="contractId">contractId</label>
-          <span matPrefix><i class="fa fa-address-card" id="icon" style="margin: 0 7px"></i></span>
-          <input matInput type="text" id="contractId" name="contractId" #email="ngModel" [(ngModel)]="userRegistration.contractId"
-            placeholder="Szerződésszám" contractId />
-        </mat-form-field>
 
-        <mat-form-field>
-          <label class="sr-only" for="macAddress">macAddress</label>
-          <span matPrefix><i class="fa fa-address-book" id="icon" style="margin: 0 8px"></i></span>
-          <input matInput type="text" id="macAddress" name="macAddress" #email="ngModel" [(ngModel)]="userRegistration.macAddress" 
-            placeholder="MAC Address" macAddress />
-        </mat-form-field>
 
-        <mat-form-field>
-          <label class="sr-only" for="accessLevel">accessLevel</label>
-          <span matPrefix><i class="fa fa-key" id="icon" style="margin: 0 6px"></i></span>
-          <mat-select type="text" id="accessLevel" name="accessLevel" #email="ngModel" [(ngModel)]="userRegistration.accessLevel" placeholder="Jogosultság">
-            <mat-option value="2">Felhasználó</mat-option>
-            <mat-option value="1">Operátor</mat-option>
-          </mat-select>
-        </mat-form-field>
+      <mat-form-field>
+        <label class="sr-only" for="email">Email</label>
+        <span matPrefix><i class="fa fa-envelope" id="icon" style="margin: 0 8px"></i></span>
+        <input matInput type="email" id="email" name="email" #email="ngModel" [(ngModel)]="userRegistration.email"
+          placeholder="E-mail cím" email />
+      </mat-form-field>
 
-        <mat-form-field>
-          <label class="sr-only" for="group">group</label>
-          <span matPrefix><i class="fa fa-users" id="icon" style="margin: 0 6px"></i></span>
-          <mat-select type="text" id="group" name="group" #email="ngModel" [(ngModel)]="userRegistration._group" placeholder="Osztály">
-            <mat-option *ngFor="let listElement of list" [value]="listElement._id">
-              {{listElement.name}}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
+      <mat-form-field>
+        <label class="sr-only" for="contractId">contractId</label>
+        <span matPrefix><i class="fa fa-address-card" id="icon" style="margin: 0 7px"></i></span>
+        <input matInput type="text" id="contractId" name="contractId" #email="ngModel" [(ngModel)]="userRegistration.contractId"
+          placeholder="Szerződésszám" contractId />
+      </mat-form-field>
 
-        <button (click)="registration()" class="btn btn-block mt-3 mx-auto">REGISZTRÁLÁS</button>
-      </form>
-    </div>
+      <mat-form-field>
+        <label class="sr-only" for="macAddress">macAddress</label>
+        <span matPrefix><i class="fa fa-address-book" id="icon" style="margin: 0 8px"></i></span>
+        <input matInput type="text" id="macAddress" name="macAddress" #email="ngModel" [(ngModel)]="userRegistration.macAddress"
+          placeholder="MAC Address" macAddress />
+      </mat-form-field>
 
- 
+      <mat-form-field>
+        <label class="sr-only" for="accessLevel">accessLevel</label>
+        <span matPrefix><i class="fa fa-key" id="icon" style="margin: 0 6px"></i></span>
+        <mat-select type="text" id="accessLevel" name="accessLevel" #email="ngModel" [(ngModel)]="userRegistration.accessLevel"
+          placeholder="Jogosultság">
+          <mat-option value="2">Felhasználó</mat-option>
+          <mat-option value="1">Operátor</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <label class="sr-only" for="group">group</label>
+        <span matPrefix><i class="fa fa-users" id="icon" style="margin: 0 6px"></i></span>
+        <mat-select type="text" id="group" name="group" #email="ngModel" [(ngModel)]="userRegistration._group"
+          placeholder="Osztály">
+          <mat-option *ngFor="let listElement of list" [value]="listElement._id">
+            {{listElement.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <button (click)="registration()" class="btn btn-block mt-3 mx-auto">REGISZTRÁLÁS</button>
+    </form>
+  </div>
+
+
 </div>

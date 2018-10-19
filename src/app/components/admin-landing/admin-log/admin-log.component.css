@@ -3,10 +3,11 @@
     color: #304d6d;
     background-color: white;
     border: 1px solid #304d6d;
-    border-left: 10px solid #304d6d;
+    border-left: 2px solid #304d6d;
     border-right: 2px solid #304d6d;
     padding: 5px;
-    height: 40px;   
+    height: 40px;
+    position: relative;
 }
 
 .showfield {
@@ -33,7 +34,6 @@
 button {
     background-color: white;
     color: #304d6d;
-    float: right;
     border: 0;
     width: 30px;
 }
@@ -53,6 +53,7 @@ h3 {
 }
 
 .icons{
-    width: 50px;
-    background-color: puprle;
+    width: 100px;
+    position: absolute;
+    right: 0;
 }
