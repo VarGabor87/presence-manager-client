@@ -81,7 +81,7 @@ mat-form-field{
 }
 
 .bgIMG {
-  background: url('https://previews.123rf.com/images/stillfx/stillfx1009/stillfx100900063/7733415-reloj-y-calendario-sobre-fondo-de-color-.jpg')  center center;
+  background: url('/../assets/img/calendar.jpg')  center center;
   position: absolute;
   z-index: -1;
   top: 0;
